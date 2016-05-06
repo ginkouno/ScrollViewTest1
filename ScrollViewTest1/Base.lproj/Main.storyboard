@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewTest1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iP-Dv-t9v">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3XT-GR-fpw">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amZ-4G-32z">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtB-9L-tm3">
+                                                        <rect key="frame" x="277" y="185" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="secondViewToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9eu-pw-YMb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="91x-Nr-Ato"/>
+                                                    <constraint firstItem="PtB-9L-tm3" firstAttribute="centerX" secondItem="amZ-4G-32z" secondAttribute="centerX" id="SPt-OG-kG3"/>
+                                                    <constraint firstItem="PtB-9L-tm3" firstAttribute="centerY" secondItem="amZ-4G-32z" secondAttribute="centerY" id="SlT-ZU-lyo"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmz-vF-pIj">
+                                                <rect key="frame" x="0.0" y="400" width="600" height="400"/>
+                                                <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="63Q-ev-sGu"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUV-js-DP5">
+                                                <rect key="frame" x="0.0" y="800" width="600" height="400"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="vCz-ip-MHC"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3XT-GR-fpw" firstAttribute="leading" secondItem="2iP-Dv-t9v" secondAttribute="leading" id="LxF-Tl-e6t"/>
+                                    <constraint firstAttribute="bottom" secondItem="3XT-GR-fpw" secondAttribute="bottom" id="QGZ-o7-s8j"/>
+                                    <constraint firstAttribute="trailing" secondItem="3XT-GR-fpw" secondAttribute="trailing" id="iTq-Wo-bqb"/>
+                                    <constraint firstItem="3XT-GR-fpw" firstAttribute="centerX" secondItem="2iP-Dv-t9v" secondAttribute="centerX" id="kWK-xi-QSx"/>
+                                    <constraint firstItem="3XT-GR-fpw" firstAttribute="top" secondItem="2iP-Dv-t9v" secondAttribute="top" id="wOG-7N-fO0"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2iP-Dv-t9v" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1ou-F0-z7p"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2iP-Dv-t9v" secondAttribute="bottom" id="875-4A-HoP"/>
+                            <constraint firstItem="2iP-Dv-t9v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="adq-t2-myl"/>
+                            <constraint firstItem="2iP-Dv-t9v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tZt-G5-yQV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstView" destination="amZ-4G-32z" id="3lw-OE-Ntq"/>
+                        <outlet property="scrollView" destination="2iP-Dv-t9v" id="XiI-Hd-5DY"/>
+                        <outlet property="secondView" destination="Vmz-vF-pIj" id="eVN-jN-kXO"/>
+                        <outlet property="stackView" destination="3XT-GR-fpw" id="nO8-TI-bfN"/>
+                        <outlet property="thirdView" destination="zUV-js-DP5" id="QVq-U8-PUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="421"/>
+        </scene>
+    </scenes>
+</document>
